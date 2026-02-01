@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+ <title>Zubaida Hospital - Home</title>
+    <style>
+
+      
+        h1 {
+    color: black;
+    text-align: center; /* Use this instead of left: 40% */
+    width: 100%;
+    margin: 20px 0;
+}
+
+h4 {
+    color: #007bff; /* Standardized to match your grid */
+    text-align: center; /* This perfectly centers it inside the card */
+    width: 100%;
+    margin-bottom: 15px;
+}
+        nav{
+            padding-left:20% ;
+            display: flex;
+            gap: 50px;
+            background-color: black;
+        }
+
+        html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+ 
+    overflow-x: hidden; 
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Crucial for preventing width issues */
+}
+
+/* Section Styling */
+.content-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.grey-bg {
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-card {
+    border: 1px solid black;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the heading and text horizontally */
+    text-align: center;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card h4 {
+    position: static; /* This cancels the "relative" position from above */
+    left: 0;          /* This cancels the "left: 42%" shift */
+}
+
+
+
+
+         
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; }
+        .hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); 
+                height: 80vh; background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; padding: 0 20px; }
+        .hero h1 { font-size: 3rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; max-width: 600px; margin-bottom: 30px; }
+        .cta-buttons { display: flex; gap: 20px; }
+        .btn { padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 1rem; transition: 0.3s; }
+        .btn-primary { background-color: #007bff; color: white; }
+        .btn-secondary { background-color: white; color: #333; }
+        .btn:hover { opacity: 0.9; transform: translateY(-2px); }
+        .features { padding: 50px 20px; display: flex; justify-content: space-around; flex-wrap: wrap; background: #fff; }
+        .feature-card { max-width: 300px; text-align: center; padding: 20px; border: 1px solid black; border-radius: 10px; }
+        .feature-card i { font-size: 2rem; color: #007bff; }
+    </style>
+</head>
+<body>
+   
+  
+       <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script><!DOCTYPE html>
+<html lang="en">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+
+    <section class="hero">
+        <h1>Welcome to Zubaida Hospital</h1>
+        <p>Providing world-class healthcare with a human touch. Your health is our priority, and our expert doctors are here to serve you 24/7.</p>
+        <div class="cta-buttons">
+             
+            <a href="appointment.html" class="btn btn-primary">Book Appointment</a>
+            <a href="register.html" class="btn btn-secondary">Join Us Today</a>
+        
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature-card">
+            <h3>Expert Doctors</h3>
+            <p>Access to specialists like Dr. Smith and Dr. Jones for all your medical needs.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Easy Booking</h3>
+            <p>Our real-time system allows you to secure your slot in seconds.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Patient First</h3>
+            <p>A modest and patient-focused environment dedicated to your recovery.</p>
+        </div>
+    </section>
+    <section id="about" class="content-section">
+    <div class="container">
+        <h2>About Zubaida Hospital</h2>
+        <p>Zubaida Hospital has been a cornerstone of healthcare excellence for over 20 years. We pride ourselves on our modest yet state-of-the-art facilities and our commitment to patient-centered care. Our mission is to provide accessible, high-quality medical services to our community with compassion and integrity.</p>
+    </div>
+</section>
+
+<section id="services" class="content-section grey-bg">
+    <div class="container">
+        <h2>Our Specialized Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h4>General Medicine</h4>
+                <p>Comprehensive check-ups and treatment for common illnesses provided by experts like Dr. Smith.</p>
+            </div>
+            <div class="service-card">
+                <h4>Pediatrics</h4>
+                <p>Dedicated care for children's health and development, led by our specialist Dr. Jones.</p>
+            </div>
+            <div class="service-card">
+                <h4>24/7 Emergency</h4>
+                <p>Our emergency department is always open to provide immediate care for urgent medical needs.</p>
+            </div>
+            <div class="service-card">
+                <h4>Diagnostic Lab</h4>
+                <p>High-tech laboratory services for accurate and timely testing and results.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <footer style="text-align: center; padding: 20px; background: #333; color: white;">
+        <p>&copy; 2026 Zubaida Hospital Patient Portal</p>
+    </footer>
+
+
+</body>
+</html>

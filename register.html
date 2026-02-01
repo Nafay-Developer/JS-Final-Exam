@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Zubaida Hospital</title>
+    <style>
+        .home {
+    position: fixed;        /* stays at top */
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    background-color: #000;
+    padding: 8px 14px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+.home:hover {
+    background-color: #333;
+}
+@media (max-width: 768px) {
+
+    body {
+        align-items: flex-start;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .home {
+        top: 10px;
+        left: 10px;
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+}
+
+        .container { max-width: 400px; margin: 50px auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; }
+        input { width: 100%; margin: 10px 0; padding: 10px; box-sizing: border-box; }
+        button { width: 100%; padding: 10px; background-color: #000; color: #fff; cursor: pointer; }
+    </style>
+</head>
+<body>
+     <a href="index.html" class="home"> Home Page</a>
+    <div class="container">
+        <h2>Create Account</h2>
+        <form id="register-form">
+            <input type="email" id="reg-email" placeholder="Enter Email" required>
+            <input type="password" id="reg-password" placeholder="Create Password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <div style="margin-top: 20px; text-align: center;">
+    <p>OR</p>
+    <button id="google-login" style="background-color: #4285F4; color: white;">
+        Sign in with Google
+    </button>
+</div>
+        <p>Already have an account? <a href="login.html">Login here</a></p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+</body>
+</html>

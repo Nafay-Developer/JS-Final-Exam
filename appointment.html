@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - Zubaida Hospital</title>
+    <style>
+      
+            .home {
+    position: fixed;        /* stays at top */
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    background-color: #000;
+    padding: 8px 14px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+.home:hover {
+    background-color: #333;
+}
+        body { font-family: sans-serif; padding: 20px; }
+        .container { max-width: 500px; margin: auto; border: 1px solid #ddd; padding: 20px; border-radius: 8px; }
+        input, select, textarea { width: 100%; margin: 10px 0; padding: 10px; display: block; }
+        button { background: #000; color: #fff; padding: 10px 20px; border: none; cursor: pointer; width: 100%; }
+        .card { border: 1px solid #ccc; padding: 10px; margin-top: 10px; border-radius: 5px; background: #f9f9f9; }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="home"> Home Page</a>
+
+    <div class="container">
+        <h2>Book an Appointment</h2>
+        <form id="appointment-form">
+            <input type="text" id="patientName" placeholder="Patient Name" required>
+            
+            <select id="doctorSelect" required>
+                <option value="">Select Doctor</option>
+                <option value="Dr. Smith">Dr. Smith (General)</option>
+                <option value="Dr. Jones">Dr. Jones (Pediatrics)</option>
+                <option value="Dr. Ahmed">Dr. Ahmed (Cardiologist)</option>
+                <option value="Dr. Ali">Dr. Ali (dermatologist)</option>
+                <option value="Dr. Sara">Dr. Sara (neurologist)</option>
+            </select>
+            
+            <label>Visit Date:</label>
+            <input type="date" id="visitDate" required>
+            
+            <label>Visit Time:</label>
+            <input type="time" id="visitTime" required>
+            
+            <textarea id="reason" placeholder="Reason for visit" rows="4" required></textarea>
+            
+            <button type="submit">Confirm Booking</button>
+        </form>
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <h2>My Appointments</h2>
+        <div id="appointments-list">
+            </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+</body>
+</html>
