@@ -31,7 +31,7 @@ if (googleBtn) {
             provider: 'google',
             options: {
                 // This redirects the user back to your appointment page after login
-                redirectTo: window.location.origin + '/appointment.html' 
+                redirectTo: window.location.href = "https://nafay-developer.github.io/JS-Final-Exam/appointment.html";
             }
         });
 
@@ -149,4 +149,5 @@ if (logoutBtn) {
             window.location.href = 'register.html'; // Redirect to login
         }
     });
+
 }
